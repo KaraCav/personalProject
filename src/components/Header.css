@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  height: 15vh;
+  width: 100vw;
+  background-color: rgb(248, 248, 204);
+  margin: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+}

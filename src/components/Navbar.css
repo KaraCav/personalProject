@@ -1,0 +1,21 @@
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(90deg, #f1ffd9, #00a8a4);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.815);
+  letter-spacing: 1.5px;
+  height: 46px;
+  width: 100vw;
+  font-family: Montserrat;
+  word-spacing: 2px;
+}
+
+.leftNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 14px;
+}
