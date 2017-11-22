@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 import Appointments from './Appointments';
 import './Appointments.css';
 import './Homepage.css';
@@ -23,14 +24,33 @@ export default class Homepage extends Component {
 
           <div id="motto">
             <h1>Welcome to Gateway Mentoring!</h1>
-            <br />
+
             <h2>Unlocking Potential in Every Student</h2>
+            <h4>Feel free to follow us on: </h4>
+            <Link to="/facebook">
+              <img
+                className="smallLogo"
+                src={require('../images/facebook_logo.png')}
+              />
+            </Link>
+            <Link to="/instagram">
+              <img
+                className="smallLogo"
+                src={require('../images/Instagram-logo.png')}
+              />
+            </Link>
+            <Link to="/pinterest">
+              <img
+                className="smallLogo"
+                src={require('../images/pinterestlogo.png')}
+              />
+            </Link>
           </div>
         </div>
         <div className="homeBackground2">
           <div className={['animated fadeInLeft', 'homepageSecond'].join(' ')}>
             <div className="motto2">
-              <h1>What's the definition of success?</h1>
+              <h1>How do you define success?</h1>
 
               <p>
                 Ask five people, and chances are good that you will end up with
@@ -69,11 +89,11 @@ export default class Homepage extends Component {
 
           <div className="motto3">
             <h1>Ready to ignite that spark?</h1>
-            <h3>
+            <p>
               Developing a passion for learning doesn't have to be a struggle.
               Let us know how we can help you or your loved one to get excited
               about learning!
-            </h3>
+            </p>
           </div>
         </div>
       </div>

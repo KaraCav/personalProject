@@ -45,25 +45,31 @@ p {
 }
 .homeBackground2 {
   background-color: #c63f60;
-  z-index: 0;
 }
 .motto3 {
   border: 4px solid rgb(248, 248, 204);
   border-radius: 8px;
-  margin: 3vw;
+  margin: 4vw;
   width: 40vw;
+  height: 40vh;
   padding: 10px;
+
   line-height: 20px;
   letter-spacing: 0.3px;
   z-index: 0;
 }
 .openbook2 {
-  height: 80vh;
+  height: 60vh;
   margin: 1vw;
-  padding-right: 10vw;
-  padding-left: 4vw;
+  padding-right: 13vw;
+  padding-left: 7vw;
   z-index: 0;
 }
 .homepageBottom {
   display: flex;
+  height: 64vh;
+}
+.smallLogo {
+  height: 40px;
+  margin: 15px;
 }

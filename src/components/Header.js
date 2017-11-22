@@ -25,7 +25,7 @@ export default class Header extends Component {
           </Link>
         </div>
         <div>
-          <Link to="/appointments">
+          <Link to="/Workshops">
             <h3>Workshops</h3>
           </Link>
         </div>
