@@ -18,16 +18,37 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
         <div className="logo">
           <Link to="/">
             <img src={require('../images/logoxs.png')} />
           </Link>
+        </div>
+        <div>
           <Link to="/appointments">
-            <img src={require('../images/logoxs.png')} />
+            <h3>Workshops</h3>
           </Link>
-
-          <button onClick={this.handleLogin}> Login </button>
+        </div>
+        <div>
+          <Link to="/appointments">
+            <h3>Tutoring/Mentoring</h3>
+          </Link>
+        </div>
+        <div>
+          <Link to="/merchandise">
+            <h3>Merchandise</h3>
+          </Link>
+        </div>
+        <div>
+          <Link to="/appointments">
+            <h3>New to us? Click here!</h3>
+          </Link>
+        </div>
+        <div>
+          <button className="loginButton" onClick={this.handleLogin}>
+            {' '}
+            Mentor Login{' '}
+          </button>
         </div>
       </div>
     );

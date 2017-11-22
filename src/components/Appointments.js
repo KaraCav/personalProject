@@ -22,7 +22,7 @@ class Appointments extends Component {
   // }
 
   // reqAppt() {
-  //   axios.post('/api/appts', {
+  //   axios.post('/api/appts', {   // reqappts ?
   //     student_name: this.props.firstName,
   //     parent_name: this.props.lastName
   //   });
@@ -31,7 +31,7 @@ class Appointments extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.reqAppt}>SEND TO MY GODDAMN SERVER</button>
+        <button onClick={this.reqAppt}>SEND TO MY SERVER</button>
 
         <div className="edit-container">
           <p>Student's First Name</p>

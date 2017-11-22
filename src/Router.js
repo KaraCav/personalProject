@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import { BrowserRouter } from 'react-router-dom';
 import Appointments from './components/Appointments';
 import NewClient from './components/NewClient';
+import Merchandise from './components/Merchandise';
 export default class Router extends Component {
   constructor(props) {
     super(props);
@@ -42,6 +43,7 @@ export default class Router extends Component {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/Appointments" component={NewClient} />
+        <Route exact path="/Merchandise" component={Merchandise} />
       </Switch>
     );
   }

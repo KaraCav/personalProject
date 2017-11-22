@@ -1,7 +1,5 @@
-div.newClientDiv {
+.newClientDiv {
   display: flex;
   width: 60vw;
   flex-direction: column;
-  align-content: flex-start;
-  justify-content: flex-end;
 }
