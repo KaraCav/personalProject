@@ -16,7 +16,7 @@ export default class Homepage extends Component {
           <div>
             <div>
               <img
-                className="openbook1"
+                className="openbook4"
                 src={require('../images/elementaryKids.jpg')}
               />
             </div>

@@ -73,3 +73,11 @@ p {
   height: 40px;
   margin: 15px;
 }
+.openbook4 {
+  width: 50vw;
+  padding: 4vh;
+  width: 40vw;
+  display: flex;
+
+  z-index: 0;
+}
