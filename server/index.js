@@ -91,9 +91,14 @@ app.get('/api/test', (req, res, next) => {
     })
     .catch(console.log);
 });
-
+//
+// // ADD TO CART // ///////////////////////////////
+// app.post('/api/product', controller.create);
+//
+//
 app.post('/api/reqappt', controller.createNewUserByName);
 // app.get('/api/users', controller.getUsers);
+app.get('/api/products', controller.getProducts);
 
 const port = 3001;
 

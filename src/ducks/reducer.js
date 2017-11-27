@@ -5,7 +5,7 @@ const initialState = {
   ageGrouping: ''
 };
 //ACTION TYPES
-
+// const ADD_TO_CART = 'ADD_TO_CART';
 const UPDATE_FIRST_NAME = 'UPDATE_FIRST_NAME';
 const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
 const UPDATE_AGE_GROUPING = 'UPDATE_AGE_GROUPING';
@@ -20,7 +20,6 @@ function reducer(state = initialState, action) {
       return Object.assign({}, state, { lastName: action.payload });
     case UPDATE_AGE_GROUPING:
       return Object.assign({}, state, { ageGrouping: action.payload });
-
     default:
       return state;
   }

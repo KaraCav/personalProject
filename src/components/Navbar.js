@@ -11,7 +11,7 @@ export default class Navbar extends Component {
           <h1>Gateway Mentoring</h1>
         </div>
         <div className="leftNav">
-          <h3>Call Today! (518)755-6444 </h3>
+          <h3>Call Today! (617)545-7479 </h3>
           {/* <img className="logo" src={require('../images/homelogo.png')} />
           <img className="logo" src={require('../images/searchlogo.png')} /> */}
         </div>

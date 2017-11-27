@@ -2,11 +2,39 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import Appointments from './Appointments';
+import axios from 'axios';
 import './Appointments.css';
 import './Homepage.css';
 import './Merchandise.css';
 
-export default class Homepage extends Component {
+////// making add to cart ////////////////////
+// const ADD_TO_CART = 'ADD_TO_CART';
+// const intialState = {
+//   products,
+//   productsInCart: []
+// };
+//////////////////////////////////////////////
+export default class Merchandise extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      productsList: []
+    };
+  }
+
+  addToCart() {
+    axios.post('/cart', {});
+  }
+
+  componentWillMount() {
+    axios.get('/api/products').then(response => {
+      this.setState({ productsList: response.data });
+      console.log(response);
+    });
+    console.log(this.state.productsList);
+  }
+
   render() {
     return (
       <div className="homeBackground">
@@ -77,7 +105,7 @@ export default class Homepage extends Component {
           </div>
 
           <div className={['notepad'].join(' ')}>
-            <h1>Notepad Organizer</h1>
+            <h1>Notepad Organizer ($3.50)</h1>
             <p className="schoolStore">
               The schoolwork organizer that can fit in your pocket! Use this to
               make notes for later, bookmark your textbooks, and keep track of
@@ -85,7 +113,7 @@ export default class Homepage extends Component {
             </p>
             <button
               className="merchButton"
-              onClick={console.log(this.props.firstName + this.props.lastName)}
+              onClick={console.log('eric is cool')}
             >
               Add to Cart
             </button>
