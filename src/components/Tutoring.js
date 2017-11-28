@@ -13,7 +13,7 @@ export default class Tutoring extends Component {
             className="tutoringPic"
             src={require('../images/tutoring.jpg')}
           />
-          <span>Tutoring!</span>
+          <h2>Tutoring!</h2>
         </div>
       </div>
     );

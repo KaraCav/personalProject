@@ -21,7 +21,7 @@ export default class NewClient extends Component {
               Lots of info here for new students! So interesting! SO MUCH
               information that your head can't handle it! Heads exploding left
               and right! Where can I buy your amazing tutoring skills? I will
-              sell my first born for this shit!{' '}
+              sell my first born for this!{' '}
             </p>
           </div>
         </div>

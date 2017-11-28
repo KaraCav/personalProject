@@ -68,10 +68,6 @@ class Appointments extends Component {
             <input type="checkbox" />
           </div>
           <hr />
-          <select>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-          </select>
         </div>
       </div>
     );

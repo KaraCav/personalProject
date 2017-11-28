@@ -1,0 +1,38 @@
+.homeBackground2 {
+  background-color: #c63f60;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#motto {
+  width: 40vw;
+  border: 4px solid #c63f60;
+  border-radius: 8px;
+  margin: 3vw;
+  padding-top: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  z-index: 0;
+}
+.motto2 {
+  border: 4px solid rgb(248, 248, 204);
+  border-radius: 8px;
+  margin: 3vw;
+  width: 60vw;
+  padding: 10px;
+  letter-spacing: 0.1px;
+}
+.mentorBottomDiv {
+  background-color: #00a8a4;
+  padding: 20px;
+}
+.mail {
+  height: 50px;
+}
+#mentorHeader {
+  justify-content: space-around;
+}
+.linksy {
+  text-decoration: none;
+  color: black;
+}

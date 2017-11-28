@@ -1,8 +1,15 @@
 .tutorImage {
-  display: flex;
+  position: relative;
   flex-direction: row;
 }
 .tutoringPic {
   width: 50vw;
   height: 50vh;
+}
+h2 {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  color: white;
+  letter-spacing: 2px;
 }
