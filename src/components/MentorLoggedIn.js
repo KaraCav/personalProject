@@ -26,7 +26,7 @@ export default class MentorLoggedIn extends Component {
         </div>
         <div className="homeBackground2">
           <div>
-            <div className="motto2">
+            <div className="mentormotto2">
               <h1>Student List</h1>
 
               <p>

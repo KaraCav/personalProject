@@ -3,13 +3,13 @@
   flex-direction: row;
 }
 .tutoringPic {
-  width: 50vw;
-  height: 50vh;
+  width: 70vw;
+  height: 90vh;
 }
-h2 {
+.tutoringH2 {
   position: absolute;
   top: 10px;
   width: 100%;
-  color: white;
+  color: rgb(250, 236, 181);
   letter-spacing: 2px;
 }

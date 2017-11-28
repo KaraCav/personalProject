@@ -8,6 +8,7 @@ import Merchandise from './components/Merchandise';
 import Workshops from './components/Workshops';
 import Tutoring from './components/Tutoring';
 import MentorLoggedIn from './components/MentorLoggedIn';
+import ZTestPage from './components/ZTestPage';
 
 export default class Router extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ export default class Router extends Component {
         <Route exact path="/Merchandise" component={Merchandise} />
         <Route exact path="/Tutoring" component={Tutoring} />
         <Route exact path="/MentorPage" component={MentorLoggedIn} />
+        <Route exact path="/ZTest" component={ZTestPage} />
 
         <Route
           path="/facebook"
