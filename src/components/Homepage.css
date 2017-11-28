@@ -10,7 +10,6 @@
 .homepageSecond {
   display: flex;
   flex-direction: row;
-  z-index: 0;
 }
 p {
   font-size: 16px;
@@ -22,7 +21,6 @@ p {
   margin: 3vw;
   width: 40vw;
   padding: 10px;
-  z-index: 0;
   letter-spacing: 0.1px;
 }
 .openbook1 {

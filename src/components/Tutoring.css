@@ -1,0 +1,8 @@
+.tutorImage {
+  display: flex;
+  flex-direction: row;
+}
+.tutoringPic {
+  width: 50vw;
+  height: 50vh;
+}

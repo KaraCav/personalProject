@@ -19,28 +19,61 @@ export default class Merchandise extends Component {
     super();
 
     this.state = {
-      productsList: []
+      productsList: [],
+      productName: '',
+      productPrice: 0
     };
-  }
-
-  addToCart() {
-    axios.post('/cart', {});
+    this.addToCart = this.addToCart.bind(this);
   }
 
   componentWillMount() {
-    axios.get('/api/products').then(response => {
-      this.setState({ productsList: response.data });
-      console.log(response);
+    axios.get('http://localhost:3001/api/products').then(response => {
+      this.setState({
+        productsList: response.data
+      });
     });
-    console.log(this.state.productsList);
   }
 
+  addToCart(name, price) {
+    this.setState({ productName: name, productPrice: price });
+    axios.post('/cart', {
+      name: this.state.productName,
+      price: this.state.productPrice
+    });
+  }
+
+  //  addToCart() {
+  //    axios.post('/cart', {});
+  //  }
+
   render() {
+    var products = this.state.productsList.map(function(product, index) {
+      return (
+        <div className={['animated fadeInRight', 'homepageFirst'].join(' ')}>
+          <div id="motto2">
+            <h1>{product.name}</h1>
+            <p>${product.price}</p>
+            <p className="schoolStore">{product.description}</p>
+            <div
+              style={{ background: `url(${product.image_url})` }}
+              className="product-img"
+            />
+            <button
+              className="merchButton"
+              onClick={() => this.addToCart(product.name, product.price)}
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      );
+    }, this);
+
     return (
       <div className="homeBackground">
         <Navbar />
         <Header />
-        <div className={['animated fadeInRight', 'homepageFirst'].join(' ')}>
+        <div className={['animated fadeInRight', 'homepageSecond'].join(' ')}>
           <div>
             <div>
               <img
@@ -72,14 +105,7 @@ export default class Merchandise extends Component {
                 special pages for our mentors to fill in suggestions and
                 achievements for the week!
               </p>
-              <button
-                className="merchButton"
-                onClick={console.log(
-                  this.props.firstName + this.props.lastName
-                )}
-              >
-                Add to Cart
-              </button>
+              <button className="merchButton">Add to Cart</button>
             </div>
             <div>
               <img
@@ -111,12 +137,7 @@ export default class Merchandise extends Component {
               make notes for later, bookmark your textbooks, and keep track of
               exam dates!
             </p>
-            <button
-              className="merchButton"
-              onClick={console.log('eric is cool')}
-            >
-              Add to Cart
-            </button>
+            <button className="merchButton">Add to Cart</button>
           </div>
         </div>
 
@@ -128,14 +149,7 @@ export default class Merchandise extends Component {
               <p className="schoolStore">
                 Brighten up your student's day with our colorful, #2 pencils.
               </p>
-              <button
-                className="merchButton"
-                onClick={console.log(
-                  this.props.firstName + this.props.lastName
-                )}
-              >
-                Add to Cart
-              </button>
+              <button className="merchButton">Add to Cart</button>
             </div>
             <div>
               <img

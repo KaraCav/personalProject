@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import Appointments from './Appointments';
+import Tutoring from './Tutoring';
 
 export default class Header extends Component {
   constructor() {
@@ -30,8 +31,8 @@ export default class Header extends Component {
           </Link>
         </div>
         <div>
-          <Link to="/appointments">
-            <h3>Tutoring/Mentoring</h3>
+          <Link to="/Tutoring">
+            <h3>Tutoring</h3>
           </Link>
         </div>
         <div>

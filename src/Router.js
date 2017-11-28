@@ -6,6 +6,7 @@ import Appointments from './components/Appointments';
 import NewClient from './components/NewClient';
 import Merchandise from './components/Merchandise';
 import Workshops from './components/Workshops';
+import Tutoring from './components/Tutoring';
 
 export default class Router extends Component {
   constructor(props) {
@@ -46,22 +47,25 @@ export default class Router extends Component {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/Appointments" component={NewClient} />
         <Route exact path="/Merchandise" component={Merchandise} />
+        <Route exact path="/Tutoring" component={Tutoring} />
+
         <Route
           path="/facebook"
           component={() =>
-            (window.location = 'https://www.facebook.com/GatewayMentoringLLC/')}
+            (window.location = 'https://www.facebook.com/GatewayMentoringLLC/')
+          }
         />
         <Route
           path="/instagram"
           component={() =>
-            (window.location =
-              'https://www.instagram.com/gatewaymentoringllc/')}
+            (window.location = 'https://www.instagram.com/gatewaymentoringllc/')
+          }
         />
         <Route
           path="/pinterest"
           component={() =>
-            (window.location =
-              'https://www.pinterest.com/gatewaymentoringllc/')}
+            (window.location = 'https://www.pinterest.com/gatewaymentoringllc/')
+          }
         />
         <Route exact path="/Workshops" component={Workshops} />
       </Switch>
