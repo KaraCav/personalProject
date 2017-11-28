@@ -10,7 +10,7 @@ import axios from 'axios';
 //   productsInCart: []
 // };
 //////////////////////////////////////////////
-export default class Merchandise extends Component {
+export default class ZTestPage extends Component {
   constructor() {
     super();
 

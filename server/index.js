@@ -8,9 +8,9 @@ const session = require('express-session');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 
-const connectionString = require('../config').massive;
-const { secret } = require('../config').session;
-const { domain, clientID, clientSecret } = require('../config.js').auth0;
+const connectionString = require('./config').massive;
+const { secret } = require('./config').session;
+const { domain, clientID, clientSecret } = require('./config.js').auth0;
 
 const app = express();
 

@@ -1,11 +1,15 @@
 import axios from 'axios';
 const initialState = {
+  cart: '',
   firstName: '',
   lastName: '',
   ageGrouping: ''
 };
 //ACTION TYPES
 // const ADD_TO_CART = 'ADD_TO_CART';
+const ADD_TO_CART = 'ADD_TO_CART';
+const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+///////////////////////
 const UPDATE_FIRST_NAME = 'UPDATE_FIRST_NAME';
 const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
 const UPDATE_AGE_GROUPING = 'UPDATE_AGE_GROUPING';
