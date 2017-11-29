@@ -102,7 +102,7 @@ app.post('/api/reqappt', controller.createNewUserByName);
 // app.get('/api/users', controller.getUsers);
 app.get('/api/products', controller.getProducts);
 
-app.post('/api/cart', controller.addProductToCart);
+app.post('/api/cart', controller.addToCart);
 
 const port = 3001;
 

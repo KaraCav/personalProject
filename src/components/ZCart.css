@@ -1,0 +1,12 @@
+.myCartMain {
+  display: flex;
+  flex-direction: column;
+}
+.myCart {
+  height: 10vh;
+  justify-content: center;
+  align-content: center;
+}
+.rule {
+  width: 100%;
+}

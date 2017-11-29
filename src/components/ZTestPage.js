@@ -89,6 +89,7 @@ export default class ZTestPage extends Component {
             </p>
           </div>
         </div>
+        {products}
       </div>
     );
   }
