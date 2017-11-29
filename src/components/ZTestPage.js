@@ -50,8 +50,8 @@ export default class ZTestPage extends Component {
   render() {
     var products = this.state.productsList.map(function(product, index) {
       return (
-        <div className={['animated fadeInRight', 'homepageFirst'].join(' ')}>
-          <div>
+        <div className={['animated fadeInRight', 'zTestPage'].join(' ')}>
+          <div className="productDiv">
             <h1>{product.name}</h1>
             <p>${product.price}</p>
             <p className="schoolStore">{product.description}</p>
@@ -72,6 +72,7 @@ export default class ZTestPage extends Component {
             >
               Add to Cart
             </button>
+            <hr />
           </div>
         </div>
       );
@@ -81,7 +82,13 @@ export default class ZTestPage extends Component {
       <div className="homeBackground">
         <Navbar />
         <Header />
-        <div className={['animated fadeInRight', 'homepageSecond'].join(' ')}>
+        <div
+          className={[
+            'animated fadeInRight',
+            'homepageSecond',
+            'myTestPageMain'
+          ].join(' ')}
+        >
           <div>
             <div>
               <img
@@ -91,7 +98,7 @@ export default class ZTestPage extends Component {
             </div>
           </div>
 
-          <div id="motto">
+          <div class="testMotto">
             <h1>Gateway School Store</h1>
             <h2>Get some swag!</h2>
             <p className="schoolStore">
