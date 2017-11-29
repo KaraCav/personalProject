@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .header {
   display: flex;
-
+  font-family: 'Raleway', sans-serif;
   flex-direction: row;
   font-size: 16px;
   height: 16vh;
   width: 100vw;
   color: black;
-  background-color: rgb(248, 248, 204);
+  background-color: rgb(255, 255, 233);
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
@@ -27,4 +29,86 @@
   padding-right: 20px;
   padding-left: 20px;
   font-size: 18px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  transition: 0.5s color ease;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+a:hover {
+  color: black;
+}
+a.before:before,
+a.after:after {
+  content: '';
+  transition: 0.5s all ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+a.before:before {
+  top: -0.25em;
+}
+a.after:after {
+  bottom: -0.25em;
+}
+a.before:before,
+a.after:after {
+  height: 5px;
+  height: 0.15rem;
+  width: 0;
+  background: black;
+}
+a.first:after {
+  left: 0;
+}
+a.second:after {
+  right: 0;
+}
+a.third:after,
+a.sixth:before,
+a.sixth:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+a.fourth:before,
+a.fourth:after {
+  left: 0;
+}
+a.fifth:before,
+a.fifth:after {
+  right: 0;
+}
+a.seventh:before {
+  right: 0;
+}
+a.seventh:after {
+  left: 0;
+}
+a.eigth:before {
+  left: 0;
+}
+a.eigth:after {
+  right: 0;
+}
+a.before:hover:before,
+a.after:hover:after {
+  width: 100%;
 }

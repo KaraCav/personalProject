@@ -10,3 +10,19 @@
 .rule {
   width: 100%;
 }
+.cartPic {
+  display: flex;
+  justify-content: center;
+}
+.cartPic1 {
+  padding: 20px;
+  width: 60vw;
+  height: 60vh;
+}
+.product-img {
+  height: 200px;
+  width: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

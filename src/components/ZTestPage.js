@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import axios from 'axios';
-
+import './ZCart.css';
 ////// making add to cart ////////////////////
 // const ADD_TO_CART = 'ADD_TO_CART';
 // const intialState = {
@@ -32,7 +32,7 @@ export default class ZTestPage extends Component {
 
   addToCart(name, price) {
     this.setState({ productName: name, productPrice: price });
-    axios.post('/cart', {
+    axios.post('http://localhost:3001/api/cart', {
       name: this.state.productName,
       price: this.state.productPrice
     });
@@ -46,12 +46,19 @@ export default class ZTestPage extends Component {
     var products = this.state.productsList.map(function(product, index) {
       return (
         <div className={['animated fadeInRight', 'homepageFirst'].join(' ')}>
-          <div id="motto2">
+          <div>
             <h1>{product.name}</h1>
             <p>${product.price}</p>
             <p className="schoolStore">{product.description}</p>
             <div
-              style={{ background: `url(${product.image_url})` }}
+              style={{
+                background: `url(${product.image_url})`,
+                height: 200,
+                width: 'auto',
+                backgroundPosition: 'center',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat'
+              }}
               className="product-img"
             />
             <button

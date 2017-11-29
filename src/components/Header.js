@@ -26,23 +26,23 @@ export default class Header extends Component {
           </Link>
         </div>
         <div>
-          <Link to="/Workshops">
-            <h3>Workshops</h3>
+          <Link className="third after" to="/Workshops">
+            <span>Workshops</span>
           </Link>
         </div>
         <div>
-          <Link to="/Tutoring">
-            <h3>Tutoring</h3>
+          <Link className="third after" to="/Tutoring">
+            <span>Tutoring</span>
           </Link>
         </div>
         <div>
-          <Link to="/merchandise">
-            <h3>Merchandise</h3>
+          <Link className="third after" to="/merchandise">
+            <span>Merchandise</span>
           </Link>
         </div>
         <div>
-          <Link to="/appointments">
-            <h3>New to us? Click here!</h3>
+          <Link className="third after" to="/appointments">
+            <span>New to us? Click here!</span>
           </Link>
         </div>
         <div>

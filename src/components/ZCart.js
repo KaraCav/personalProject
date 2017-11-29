@@ -24,21 +24,12 @@ export default class ZCart extends Component {
           </div>
         </div>
 
-        <div className={['homeBackground', 'homepageBottom'].join(' ')}>
+        <div className={['homeBackground', 'cartPic'].join(' ')}>
           <div>
             <img
-              className="openbook2"
-              src={require('../images/firework.jpg')}
+              className="cartPic1"
+              src={require('../images/graduation day.jpeg')}
             />
-          </div>
-
-          <div className="motto3">
-            <h1>Ready to ignite that spark?</h1>
-            <p>
-              Developing a passion for learning doesn't have to be a struggle.
-              Let us know how we can help you or your loved one to get excited
-              about learning!
-            </p>
           </div>
         </div>
       </div>
