@@ -11,6 +11,7 @@ module.exports = {
   //////////////////////////////
   addToCart: (req, res, next) => {
     const dbInstance = req.app.get('db');
+    console.log(req.body.product_name, req.body.product_price);
     //
     dbInstance
       .addToCart([req.body.product_name, req.body.product_price])

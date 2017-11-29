@@ -30,11 +30,16 @@ export default class ZTestPage extends Component {
     });
   }
 
+  //Help me understand why this shit is happening!!
+
   addToCart(name, price) {
+    console.log(name, price);
+    ///Right here!@!!!@!@!
+    //Hi Andy, it`s your buddy!
     this.setState({ productName: name, productPrice: price });
     axios.post('http://localhost:3001/api/cart', {
-      name: this.state.productName,
-      price: this.state.productPrice
+      product_name: name,
+      product_price: parseInt(price)
     });
   }
 
