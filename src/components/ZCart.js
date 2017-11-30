@@ -19,6 +19,7 @@ export default class ZCart extends Component {
     };
 
     // this.addToCart = this.addToCart.bind(this);
+    this.totalCost = this.totalCost.bind(this);
   }
 
   componentWillMount() {
@@ -28,6 +29,14 @@ export default class ZCart extends Component {
       });
     });
   }
+
+  totalCost = productsList => {
+    let total = 0;
+    for (let i = 0; i < productsList.length; i++) {
+      total += productsList[i].product_price;
+    }
+    return total;
+  };
 
   // addToCart(name, price) {
   //   console.log(name, price);
@@ -65,7 +74,6 @@ export default class ZCart extends Component {
       </div>
     ));
     //////////////////////////// TOTAL ////////////////////////////
-    const total = function(product_price) {};
 
     //////////////////////////// TOTAL ////////////////////////////
 
@@ -82,10 +90,9 @@ export default class ZCart extends Component {
           <div>{products}</div>
           <div className="checkoutButton">
             <div>
-              <h3>Total: </h3>{' '}
+              {<h3>Total: ${this.totalCost(this.state.productsList)}</h3>}
             </div>
             <div>
-              {' '}
               <button className="cartButton">Pay Now</button>
             </div>
           </div>
