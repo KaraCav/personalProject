@@ -42,7 +42,12 @@ export default class Header extends Component {
         </div>
         <div>
           <Link className="third after" to="/appointments">
-            <span>New to us? Click here!</span>
+            <span className="cartLogo">
+              <img
+                className="smallLogo"
+                src={require('../images/cuteCart.png')}
+              />
+            </span>
           </Link>
         </div>
         <div>

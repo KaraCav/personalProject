@@ -94,12 +94,14 @@ app.get('/api/test', (req, res, next) => {
     .catch(console.log);
 });
 //
-// // ADD TO CART // ///////////////////////////////
-// app.post('/api/product', controller.create);
+//////////////// DELETE FROM CART ////////////////////
 //
+app.delete('/api/item_delete/:id', controller.deleteFromCart);
 //
+/////////////// DELETE FROM CART /////////////////
+
 app.post('/api/reqappt', controller.createNewUserByName);
-// app.get('/api/users', controller.getUsers);
+
 app.get('/api/products', controller.getProducts);
 
 app.post('/api/cart', controller.addToCart);

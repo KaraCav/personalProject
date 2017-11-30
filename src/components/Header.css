@@ -38,7 +38,10 @@
   text-decoration: none;
   font-weight: bold;
 }
-
+.cartLogo {
+  justify-content: center;
+  align-content: center;
+}
 a,
 a:visited,
 a:hover,

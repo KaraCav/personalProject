@@ -11,15 +11,12 @@ export default class ZCart extends Component {
   constructor() {
     super();
 
-    this.state = {
-      productsList: [],
-      productsPrice: ''
-      // productName: '',
-      // productPrice: 0
-    };
+    this.state = { productsList: [], productsPrice: '', productId: '' };
+    // productName: '',
+    // productPrice: 0
 
-    // this.addToCart = this.addToCart.bind(this);
     this.totalCost = this.totalCost.bind(this);
+    this.deleteFromCart = this.deleteFromCart.bind(this);
   }
 
   componentWillMount() {
@@ -37,27 +34,21 @@ export default class ZCart extends Component {
     }
     return total;
   };
+  ////////////////////// DELETE FROM CART /////////////////////////////////
 
-  // addToCart(name, price) {
-  //   console.log(name, price);
-  //   this.setState({
-  //     productName: name,
-  //     productPrice: price
-  //   });
-  deleteFromCart(name, price) {
-    this.setState({
-      // productsList: productsList
-    });
+  deleteFromCart(id) {
+    axios
+      .delete('http://localhost:3001/api/item_delete/' + id)
+      .then(response => {
+        this.setState({
+          productsList: response.data
+        });
+      });
   }
-  //   axios.post('http://localhost:3001/api/cart', {
-  //     product_name: name,
-  //     product_price: parseInt(price)
-  //   });
-  // }
-  ///////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
   render() {
-    const products = this.state.productsList.map(e => (
-      <div className="cartProducts">
+    var products = this.state.productsList.map(e => (
+      <div key={e.product_name} className="cartProducts">
         <div>
           <h3>{e.product_name}</h3>
           <h3>${e.product_price}</h3>
@@ -66,16 +57,13 @@ export default class ZCart extends Component {
         <div>
           <button
             className="cartButton"
-            //onClick={() => this.addToCart(product.name, product.price)}
+            onClick={() => this.deleteFromCart(e.id)}
           >
             Delete Item
           </button>
         </div>
       </div>
     ));
-    //////////////////////////// TOTAL ////////////////////////////
-
-    //////////////////////////// TOTAL ////////////////////////////
 
     return (
       <div className="cartBackground">

@@ -48,8 +48,8 @@ export default class Router extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/Appointments" component={NewClient} />
-        <Route exact path="/Merchandise" component={Merchandise} />
+        <Route exact path="/Appointments" component={ZCart} />
+        <Route exact path="/Merchandise" component={ZTestPage} />
         <Route exact path="/Tutoring" component={Tutoring} />
         <Route exact path="/MentorPage" component={MentorLoggedIn} />
         <Route exact path="/ZTest" component={ZTestPage} />

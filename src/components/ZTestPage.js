@@ -24,18 +24,16 @@ export default class ZTestPage extends Component {
 
   componentWillMount() {
     axios.get('http://localhost:3001/api/products').then(response => {
+      console.log('response here ', response);
       this.setState({
         productsList: response.data
       });
     });
   }
 
-  //Help me understand why this shit is happening!!
-
   addToCart(name, price) {
     console.log(name, price);
-    ///Right here!@!!!@!@!
-    //Hi Andy, it`s your buddy!
+
     this.setState({ productName: name, productPrice: price });
     axios.post('http://localhost:3001/api/cart', {
       product_name: name,
@@ -98,7 +96,7 @@ export default class ZTestPage extends Component {
             </div>
           </div>
 
-          <div class="testMotto">
+          <div className="testMotto">
             <h1>Gateway School Store</h1>
             <h2>Get some swag!</h2>
             <p className="schoolStore">

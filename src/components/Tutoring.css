@@ -8,8 +8,11 @@
 }
 .tutoringH2 {
   position: absolute;
+  background-color: rgb(250, 250, 223);
   top: 10px;
-  width: 100%;
+  width: 60%;
+  margin-left: 20vw;
   letter-spacing: 2px;
-  color: rgb(250, 236, 181);
+  color: black;
+  border: 2px solid white;
 }

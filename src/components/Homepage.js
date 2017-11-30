@@ -91,8 +91,12 @@ export default class Homepage extends Component {
             <h1>Ready to ignite that spark?</h1>
             <p>
               Developing a passion for learning doesn't have to be a struggle.
-              Let us know how we can help you or your loved one to get excited
-              about learning!
+              We offer a holistic, individualized and compassionate approach to
+              learning that can benefit anyone. <br />
+              <br />Our services range from job search assistance, to college
+              transition help, to tutoring services for students with a
+              particular academic struggle. Let us know how we can help you or
+              your loved one to get excited about learning!
             </p>
           </div>
         </div>

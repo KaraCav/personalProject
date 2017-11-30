@@ -48,7 +48,7 @@ export function addToCart(product) {
   };
 }
 
-export function removeFromCart(productIndex) {
+export function deleteFromCart(productIndex) {
   return {
     type: REMOVE_FROM_CART,
     payload: productIndex
