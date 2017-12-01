@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Router from './Router';
+import Checkout from './Checkout';
+
 import Goals from './components/Goals.json';
 import logo from './logo.svg';
 import NewClient from './components/NewClient';
@@ -18,6 +20,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Checkout
+          name={'The Road to learn React'}
+          description={'Only the Book'}
+          amount={1}
+        />
         {/* <div>
           <div>
             <Link to="/">Home</Link>

@@ -14,6 +14,11 @@ const { domain, clientID, clientSecret } = require('./config.js').auth0;
 
 const app = express();
 
+const { secretKey } = require('./config.js').stripe;
+const configureRoutes = require('./routes');
+const stripe = require('stripe')(secretKey);
+configureRoutes(app);
+
 app.use(
   session({
     secret,
@@ -106,6 +111,16 @@ app.get('/api/products', controller.getProducts);
 
 app.post('/api/cart', controller.addToCart);
 app.get('/api/gateway_cart', controller.getCart);
+app.post('/checkout', (req, res) => {
+  stripe.charges.create(req.body, (stripeErr, stripeRes) => {
+    if (stripeErr) {
+      res.status(500).send({ error: stripeErr });
+    } else {
+      res.status(200).send({ success: stripeRes });
+    }
+  });
+});
+
 const port = 3001;
 
 app.listen(port, () => {
