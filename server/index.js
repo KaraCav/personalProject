@@ -109,6 +109,12 @@ app.post('/api/reqappt', controller.createNewUserByName);
 
 app.get('/api/products', controller.getProducts);
 
+/////////////// GET APPTS //////////////
+//
+app.get('/api/appts', controller.getAppts);
+//
+/////////////// GET APPTS //////////////
+
 app.post('/api/cart', controller.addToCart);
 app.get('/api/gateway_cart', controller.getCart);
 app.post('/checkout', (req, res) => {

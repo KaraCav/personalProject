@@ -18,7 +18,7 @@
   border: 4px solid #f8f8cc;
   border-radius: 8px;
   margin: 3vw;
-  width: 60vw;
+  width: 40vw;
   padding: 10px;
   letter-spacing: 0.1px;
 }
@@ -35,4 +35,8 @@
 .linksy {
   text-decoration: none;
   color: black;
+}
+.dateTime {
+  display: flex;
+  justify-content: center;
 }

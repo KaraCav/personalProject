@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
-import Appointments from './Appointments';
+//import Appointments from './Appointments';
 import axios from 'axios';
-import './Appointments.css';
+//import './Appointments.css';
 import './Homepage.css';
 import './Merchandise.css';
 

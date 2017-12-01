@@ -19,7 +19,7 @@ module.exports = {
   },
   getProducts: (req, res, next) => {
     const dbInstance = req.app.get('db');
-    console.log(dbInstance);
+    // console.log(dbInstance);
     dbInstance.getProducts().then(products => res.status(200).json(products));
   },
   getCart: (req, res, next) => {
@@ -29,10 +29,14 @@ module.exports = {
   deleteFromCart: (req, res, next) => {
     console.log('id from params: ', req.params.id);
     const dbInstance = req.app.get('db');
-    console.log();
     dbInstance
       .deleteFromCart(req.params.id)
       .then(products => res.status(200).json(products));
+  },
+  //////////////////GET APPTS ////////////////////
+  getAppts: (req, res, next) => {
+    const dbInstance = req.app.get('db');
+    // console.log(dbInstance);
+    dbInstance.getAppts().then(appts => res.status(200).json(appts));
   }
-  /////////////////////////
 };

@@ -5,9 +5,9 @@ import Homepage from './components/Homepage';
 import Router from './Router';
 import Checkout from './Checkout';
 
-import Goals from './components/Goals.json';
+//import Goals from './components/Goals.json';
 import logo from './logo.svg';
-import NewClient from './components/NewClient';
+//import NewClient from './components/NewClient';
 
 import './App.css';
 
