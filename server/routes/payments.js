@@ -1,4 +1,4 @@
-const stripe = require('../constants/stripe');
+//const stripe = require('../constants/stripe');
 
 const postStripeCharge = res => (stripeErr, stripeRes) => {
   if (stripeErr) {
