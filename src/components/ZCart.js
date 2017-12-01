@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 import Appointments from './Appointments';
+import Checkout from '../Checkout';
+
 import './ZCart.css';
 
 export default class ZCart extends Component {
@@ -80,8 +82,12 @@ export default class ZCart extends Component {
             <div>
               {<h3>Total: ${this.totalCost(this.state.productsList)}</h3>}
             </div>
-            <div>
-              <button className="cartButton">Pay Now</button>
+            <div className="cartButton">
+              <Checkout
+                name={'Gateway Mentoring'}
+                description={'Merchandise'}
+                amount={this.totalCost(this.state.productsList)}
+              />
             </div>
           </div>
         </div>

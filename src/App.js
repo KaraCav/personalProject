@@ -20,11 +20,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Checkout
-          name={'The Road to learn React'}
-          description={'Only the Book'}
-          amount={1}
-        />
         {/* <div>
           <div>
             <Link to="/">Home</Link>
