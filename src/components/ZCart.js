@@ -3,7 +3,6 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-//import Appointments from './Appointments';
 import Checkout from '../Checkout';
 
 import './ZCart.css';

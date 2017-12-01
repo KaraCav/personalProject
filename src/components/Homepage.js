@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-//import Appointments from './Appointments';
-//import './Appointments.css';
+
 import './Homepage.css';
 
 export default class Homepage extends Component {

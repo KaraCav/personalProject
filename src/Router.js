@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import { BrowserRouter } from 'react-router-dom';
-import Appointments from './components/Appointments';
-//import NewClient from './components/NewClient';
+
 import Merchandise from './components/Merchandise';
 import Workshops from './components/Workshops';
 import Tutoring from './components/Tutoring';

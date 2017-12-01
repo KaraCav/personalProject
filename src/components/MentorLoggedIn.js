@@ -26,28 +26,35 @@ export default class MentorLoggedIn extends Component {
       });
     });
   }
+  addAppt(name, date, time, hours) {
+    this.setState({
+      student_name: name,
+      appt_date: date,
+      appt_time: time,
+      hours: hours
+    });
+    axios.post('/addAppt', {
+      name: this.state.student_name,
+      appt_date: this.state.appt_date,
+      appt_time: this.state.time,
+      hours: this.state.hours
+    });
+  }
   //////////
   render() {
     // ============================================ //
     var appointments = this.state.apptsList.map((e, index) => (
       <div key={index}>
         <div>
+          <hr className="cartRule" />
           <h3>{e.student_name}</h3>
           <div className="dateTime">
             <h3>{e.appt_date} a</h3>
             <h3>t {e.appt_time}</h3>{' '}
           </div>
           <h3>Hours: {e.hours}</h3>
-          <hr className="cartRule" />
         </div>
-        <div>
-          {/* <button
-            className="cartButton"
-            onClick={() => this.deleteFromCart(e.id)}
-          >
-            Add Appt
-          </button> */}
-        </div>
+        <div />
       </div>
     ));
     // ============================================ //
@@ -62,6 +69,9 @@ export default class MentorLoggedIn extends Component {
                 className="openbook1"
                 src={require('../images/writing.jpg')}
               />
+            </div>
+            <div>
+              <h3>Add Appts</h3>
             </div>
           </div>
 
