@@ -38,5 +38,16 @@ module.exports = {
     const dbInstance = req.app.get('db');
     // console.log(dbInstance);
     dbInstance.getAppts().then(appts => res.status(200).json(appts));
+  },
+  addAppt: (req, res, next) => {
+    const dbInstance = req.app.get('db');
+    dbInstance
+      .addAppt([
+        req.body.student_name,
+        req.body.appt_date,
+        req.body.appt_time,
+        req.body.hours
+      ])
+      .then(response => res.status(200).json(response));
   }
 };

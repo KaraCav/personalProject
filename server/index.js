@@ -105,7 +105,7 @@ app.delete('/api/item_delete/:id', controller.deleteFromCart);
 //
 /////////////// DELETE FROM CART /////////////////
 
-app.post('/api/reqappt', controller.createNewUserByName);
+//app.post('/api/reqappt', controller.createNewUserByName);
 
 app.get('/api/products', controller.getProducts);
 
@@ -113,7 +113,13 @@ app.get('/api/products', controller.getProducts);
 //
 app.get('/api/appts', controller.getAppts);
 //
-/////////////// GET APPTS //////////////
+////////////////////////////
+//
+////////////// Make New Appts ////////////
+//
+app.post('/api/addAppt', controller.addAppt);
+//
+////////////// Make New Appts ////////////
 
 app.post('/api/cart', controller.addToCart);
 app.get('/api/gateway_cart', controller.getCart);
