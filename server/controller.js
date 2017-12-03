@@ -30,7 +30,7 @@ module.exports = {
     // console.log('id from params: ', req.params.id);
     const dbInstance = req.app.get('db');
     dbInstance
-      .deleteFromCart(req.params.appt_id)
+      .deleteFromCart(req.params.id)
       .then(products => res.status(200).json(products));
   },
   //////////////////GET APPTS ////////////////////
