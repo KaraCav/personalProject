@@ -33,16 +33,17 @@ export default class MentorLoggedIn extends Component {
     });
   }
   addAppt(name, date, time, notes, id) {
-    axios.post('http://localhost:3001/api/addAppt', {
-      student_name: this.state.student_name,
-      appt_date: this.state.appt_date,
-      appt_time: this.state.appt_time,
-      notes: this.state.notes
-    });
-    axios.get('http://localhost:3001/api/appts').then(response => {
-      this.setState({ apptsList: response.data });
-    });
-    this.forceUpdate();
+    axios
+      .post('http://localhost:3001/api/addAppt', {
+        student_name: this.state.student_name,
+        appt_date: this.state.appt_date,
+        appt_time: this.state.appt_time,
+        notes: this.state.notes
+      })
+      .then(response => {
+        this.setState({ apptsList: response.data });
+      });
+    //this.forceUpdate();
   }
 
   updateStudentName(userInput) {
@@ -125,25 +126,27 @@ export default class MentorLoggedIn extends Component {
                   type="text"
                   onChange={e => this.updateApptTime(e.target.value)}
                 />
-                <p>Notes</p>
-                <input
-                  type="text"
-                  onChange={e => this.updateNotes(e.target.value)}
-                />
+                <div>
+                  <p>Notes</p>
+                  <input
+                    type="text"
+                    onChange={e => this.updateNotes(e.target.value)}
+                  />
+                </div>
+                <button
+                  className="apptButton"
+                  onClick={() =>
+                    this.addAppt(
+                      this.student_name,
+                      this.state.appt_date,
+                      this.state.appt_time,
+                      this.state.notes
+                    )
+                  }
+                >
+                  Add Appointment
+                </button>
               </div>
-              <button
-                className="apptButton"
-                onClick={() =>
-                  this.addAppt(
-                    this.student_name,
-                    this.state.appt_date,
-                    this.state.appt_time,
-                    this.state.notes
-                  )
-                }
-              >
-                Add Appointment
-              </button>
             </div>
           </div>
           <div>

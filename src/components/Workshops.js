@@ -15,12 +15,14 @@ export default class Workshops extends Component {
         <div className="workshop">
           <div>
             <img
-              className="workshopFlyer"
+              className={['animated fadeInLeft', 'workshop'].join(' ')}
               src={require('../images/summerWorkshops.jpg')}
             />
           </div>
 
-          <div className="workshopMainText">
+          <div
+            className={['animated fadeInRight', 'workshopMainText'].join(' ')}
+          >
             <h1>
               You may have seen our new <br />fliers around town!
             </h1>
