@@ -27,10 +27,10 @@ module.exports = {
     dbInstance.getCart().then(products => res.status(200).json(products));
   },
   deleteFromCart: (req, res, next) => {
-    console.log('id from params: ', req.params.id);
+    // console.log('id from params: ', req.params.id);
     const dbInstance = req.app.get('db');
     dbInstance
-      .deleteFromCart(req.params.id)
+      .deleteFromCart(req.params.appt_id)
       .then(products => res.status(200).json(products));
   },
   //////////////////GET APPTS ////////////////////
@@ -46,8 +46,15 @@ module.exports = {
         req.body.student_name,
         req.body.appt_date,
         req.body.appt_time,
-        req.body.hours
+        req.body.notes
       ])
       .then(response => res.status(200).json(response));
+  },
+  deleteAppt: (req, res, next) => {
+    const dbInstance = req.app.get('db');
+    console.log(req.params.appt_id);
+    dbInstance
+      .deleteAppt([req.params.appt_id])
+      .then(products => res.status(200).json(products));
   }
 };

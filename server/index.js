@@ -120,6 +120,9 @@ app.get('/api/appts', controller.getAppts);
 app.post('/api/addAppt', controller.addAppt);
 //
 ////////////// Make New Appts ////////////
+//
+////////////// DELETE APPTS //////////////
+app.delete('/api/delete_appt/:appt_id', controller.deleteAppt);
 
 app.post('/api/cart', controller.addToCart);
 app.get('/api/gateway_cart', controller.getCart);

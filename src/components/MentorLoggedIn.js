@@ -15,34 +15,34 @@ export default class MentorLoggedIn extends Component {
       student_name: '',
       appt_date: '',
       appt_time: '',
-      hours: 0
+      notes: '',
+      appt_id: 0
     };
     this.updateStudentName = this.updateStudentName.bind(this);
     this.updateApptDate = this.updateApptDate.bind(this);
     this.updateApptTime = this.updateApptTime.bind(this);
-    this.updateHours = this.updateHours.bind(this);
+    this.updateNotes = this.updateNotes.bind(this);
+    this.deleteAppt = this.deleteAppt.bind(this);
   }
   componentWillMount() {
     axios.get('http://localhost:3001/api/appts').then(response => {
-      console.log('response here:', response.data);
+      // console.log('response here:', response.data);
       this.setState({
         apptsList: response.data
       });
     });
   }
-  addAppt(name, date, time, hours) {
-    // this.setState({
-    //   student_name: name,
-    //   appt_date: date,
-    //   appt_time: time,
-    //   hours: hours
-    // });
+  addAppt(name, date, time, notes, id) {
     axios.post('http://localhost:3001/api/addAppt', {
       student_name: this.state.student_name,
       appt_date: this.state.appt_date,
       appt_time: this.state.appt_time,
-      hours: this.state.hours
+      notes: this.state.notes
     });
+    axios.get('http://localhost:3001/api/appts').then(response => {
+      this.setState({ apptsList: response.data });
+    });
+    this.forceUpdate();
   }
 
   updateStudentName(userInput) {
@@ -58,10 +58,21 @@ export default class MentorLoggedIn extends Component {
     this.setState({ appt_time: userInput });
     console.log(this.state.appt_time);
   }
-  updateHours(userInput) {
-    this.setState({ hours: userInput });
-    console.log(this.setState.hours);
+  updateNotes(userInput) {
+    this.setState({ notes: userInput });
+    console.log(this.setState.notes);
   }
+  /////////////// DELETE APPOINTMENTS //////////////
+  deleteAppt(e) {
+    axios
+      .delete(`http://localhost:3001/api/delete_appt/${e.id}`)
+      .then(response => {
+        this.setState({
+          apptsList: response.data
+        });
+      });
+  }
+  /////////// DELETE APPOINTMENTS ///////////
 
   //////////
   render() {
@@ -75,7 +86,10 @@ export default class MentorLoggedIn extends Component {
             <h3>{e.appt_date} a</h3>
             <h3>t {e.appt_time}</h3>{' '}
           </div>
-          <h3>Hours: {e.hours}</h3>
+          <h3>{e.notes}</h3>
+          <button className="apptButton" onClick={() => this.deleteAppt(e)}>
+            Delete Appointment
+          </button>
         </div>
         <div />
       </div>
@@ -111,10 +125,10 @@ export default class MentorLoggedIn extends Component {
                   type="text"
                   onChange={e => this.updateApptTime(e.target.value)}
                 />
-                <p>Expected Hours</p>
+                <p>Notes</p>
                 <input
                   type="text"
-                  onChange={e => this.updateHours(e.target.value)}
+                  onChange={e => this.updateNotes(e.target.value)}
                 />
               </div>
               <button
@@ -124,7 +138,7 @@ export default class MentorLoggedIn extends Component {
                     this.student_name,
                     this.state.appt_date,
                     this.state.appt_time,
-                    this.state.hours
+                    this.state.notes
                   )
                 }
               >
