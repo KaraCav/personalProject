@@ -89,14 +89,27 @@ export default class Homepage extends Component {
             <h1>Ready to ignite that spark?</h1>
             <p className="raleway">
               Developing a passion for learning doesn't have to be a struggle.
-              For others, practical life skills take precedence. We offer a
-              holistic, individualized and compassionate approach to learning
-              that can benefit anyone. <br />
-              <br />Our services range from job search assistance, to college
-              transition help, to tutoring services for students with a
-              particular academic struggle. Let us know how we can help you or
-              your loved one to get excited about learning!
+              We offer a holistic, individualized and compassionate approach to
+              learning that can benefit anyone. Let us know how we can help you
+              or your loved one with educational goals! <br />
             </p>
+            <form>
+              <label className="form">
+                Name:
+                <input type="text" name="name" className="inputForm" />
+              </label>
+              <hr />
+              <label className="form">
+                Email:
+                <input type="text" name="name" className="inputForm" />
+              </label>
+              <hr />
+              <label className="form">
+                Subject:
+                <input type="text" name="name" className="inputForm" />
+              </label>
+              <input className="merchButton" type="submit" value="Submit" />
+            </form>
           </div>
         </div>
       </div>

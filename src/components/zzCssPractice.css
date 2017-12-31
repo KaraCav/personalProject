@@ -1,0 +1,23 @@
+.birdPic {
+  height: 50vh;
+  padding: 2vw;
+}
+.practice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.circle {
+  border-radius: 100%;
+  border: 2px dotted rgb(97, 209, 153);
+  padding: 10px;
+  width: 3vw;
+  align-content: center;
+  justify-content: center;
+}
+.form {
+  padding: 15px;
+}
+hr {
+  width: 35vw;
+}

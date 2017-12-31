@@ -38,6 +38,7 @@ export default class ZCart extends Component {
   ////////////////////// DELETE FROM CART /////////////////////////////////
 
   deleteFromCart(id) {
+    alert('Item removed from cart!');
     axios
       .delete('http://localhost:3001/api/item_delete/' + id)
       .then(response => {

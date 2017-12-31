@@ -58,7 +58,9 @@ export default class Merchandise extends Component {
             />
             <button
               className="merchButton"
-              onClick={() => this.addToCart(product.name, product.price)}
+              onClick={() => {
+                this.addToCart(product.name, product.price);
+              }}
             >
               Add to Cart
             </button>
@@ -129,7 +131,7 @@ export default class Merchandise extends Component {
           </div>
 
           <div className={['notepad'].join(' ')}>
-            <h1>Notepad Organizer ($3.50)</h1>
+            <h1>Notepad Organizer ($3.00)</h1>
             <p className="schoolStore">
               The schoolwork organizer that can fit in your pocket! Use this to
               make notes for later, bookmark your textbooks, and keep track of

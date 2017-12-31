@@ -32,7 +32,7 @@ export default class ZTestPage extends Component {
   }
 
   addToCart(name, price) {
-    console.log(name, price);
+    alert('Item added to cart!');
 
     this.setState({ productName: name, productPrice: price });
     axios.post('http://localhost:3001/api/cart', {

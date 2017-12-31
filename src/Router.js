@@ -9,6 +9,8 @@ import Tutoring from './components/Tutoring';
 import MentorLoggedIn from './components/MentorLoggedIn';
 import ZTestPage from './components/ZTestPage';
 import ZCart from './components/ZCart';
+import zzCssPractice from './components/zzCssPractice';
+import hireAMentor from './components/hireAMentor';
 
 export default class Router extends Component {
   constructor(props) {
@@ -53,6 +55,8 @@ export default class Router extends Component {
         <Route exact path="/MentorPage" component={MentorLoggedIn} />
         <Route exact path="/ZTest" component={ZTestPage} />
         <Route exact path="/ZCart" component={ZCart} />
+        <Route exact path="/CssPractice" component={zzCssPractice} />
+        <Route exact path="/hireMentor" component={hireAMentor} />
 
         <Route
           path="/facebook"
