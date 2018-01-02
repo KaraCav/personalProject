@@ -90,9 +90,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.textsection2 {
+  margin: 0;
+  color: rgb(247, 247, 247);
+  background-color: black;
+}
 .parallax2 {
   /* The image used */
-  background-image: url('./pictures/tapestry_background.jpg');
+  background-image: url('./pictures/milky-way-background.jpg');
 
   /* Set a specific height */
   height: 250px;
