@@ -23,7 +23,7 @@ export default class ZTestPage extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://api/products').then(response => {
+    axios.get('/api/products').then(response => {
       console.log('response here ', response);
       this.setState({
         productsList: response.data
@@ -35,7 +35,7 @@ export default class ZTestPage extends Component {
     alert('Item added to cart!');
 
     this.setState({ productName: name, productPrice: price });
-    axios.post('http://api/cart', {
+    axios.post('/api/cart', {
       product_name: name,
       product_price: parseInt(price)
     });

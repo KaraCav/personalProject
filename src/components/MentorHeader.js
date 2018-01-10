@@ -14,7 +14,7 @@ export default class Header extends Component {
   }
 
   handleLogin() {
-    window.location.href = 'http://localhost:3001/login';
+    window.location.href = '/login';
   }
 
   render() {
