@@ -27,6 +27,9 @@ app.use(
   })
 );
 
+//SERVE FRONT END
+app.use(express.static(`${__dirname}/../build`));
+
 massive(connectionString)
   .then(db => {
     app.set('db', db);
@@ -137,6 +140,10 @@ app.post('/checkout', (req, res) => {
 });
 
 const port = 3001;
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../build/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
