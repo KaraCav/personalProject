@@ -25,7 +25,7 @@ export default class Merchandise extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:3001/api/products').then(response => {
+    axios.get('/api/products').then(response => {
       this.setState({
         productsList: response.data
       });
