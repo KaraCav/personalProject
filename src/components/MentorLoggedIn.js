@@ -25,7 +25,7 @@ export default class MentorLoggedIn extends Component {
     this.deleteAppt = this.deleteAppt.bind(this);
   }
   componentWillMount() {
-    axios.get('http://localhost:3001/api/appts').then(response => {
+    axios.get('http://api/appts').then(response => {
       // console.log('response here:', response.data);
       this.setState({
         apptsList: response.data
@@ -34,7 +34,7 @@ export default class MentorLoggedIn extends Component {
   }
   addAppt(name, date, time, notes, id) {
     axios
-      .post('http://localhost:3001/api/addAppt', {
+      .post('http://api/addAppt', {
         student_name: this.state.student_name,
         appt_date: this.state.appt_date,
         appt_time: this.state.appt_time,
@@ -65,13 +65,11 @@ export default class MentorLoggedIn extends Component {
   }
   /////////////// DELETE APPOINTMENTS //////////////
   deleteAppt(e) {
-    axios
-      .delete(`http://localhost:3001/api/delete_appt/${e.id}`)
-      .then(response => {
-        this.setState({
-          apptsList: response.data
-        });
+    axios.delete(`http://api/delete_appt/${e.id}`).then(response => {
+      this.setState({
+        apptsList: response.data
       });
+    });
   }
   /////////// DELETE APPOINTMENTS ///////////
 

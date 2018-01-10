@@ -16,7 +16,7 @@ export default class Workshops extends Component {
 
   componentWillMount() {
     var numberOfProducts = [];
-    axios.get('http://localhost:3001/api/gateway_cart').then(response => {
+    axios.get('http://api/gateway_cart').then(response => {
       this.setState({
         productsList: response.data
       });

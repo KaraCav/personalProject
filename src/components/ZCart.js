@@ -21,7 +21,7 @@ export default class ZCart extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:3001/api/gateway_cart').then(response => {
+    axios.get('http://api/gateway_cart').then(response => {
       this.setState({
         productsList: response.data
       });
@@ -39,13 +39,11 @@ export default class ZCart extends Component {
 
   deleteFromCart(id) {
     alert('Item removed from cart!');
-    axios
-      .delete('http://localhost:3001/api/item_delete/' + id)
-      .then(response => {
-        this.setState({
-          productsList: response.data
-        });
+    axios.delete('http://api/item_delete/' + id).then(response => {
+      this.setState({
+        productsList: response.data
       });
+    });
   }
   ////////////////////////////////////////////////////////////////////////
   render() {

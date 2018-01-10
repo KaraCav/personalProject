@@ -24,7 +24,7 @@ class Checkout extends Component {
   onToken(amount, description) {
     return token =>
       axios
-        .post('http://localhost:3001/checkout', {
+        .post('http://checkout', {
           description,
           source: token.id,
           currency: CURRENCY,
