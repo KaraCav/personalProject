@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App] and uses the SQL, Expresss, React, Node.js stack.
+
+This was designed as a mentoring business website, where potential students/parents can view services, buy planners, etc. It also has a login feature through Auth0 which allows mentors to view, add, and delete their weekly appointments to log hours. 
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
